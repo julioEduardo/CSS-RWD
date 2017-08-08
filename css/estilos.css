@@ -1,10 +1,15 @@
 body{
 	font-family: 'Dancing Script', cursive;
+	background-color: #02010a;
 }
 header{
 	background-color: #5b7989;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
+}
+footer{
+	border-radius: 0px 0px 10px 10px;
+	background-color: #C6d5c5;
 }
 h1{
 	text-align: left;
@@ -14,20 +19,75 @@ h1{
 nav{
 	text-align: right;
 }
-ul{
-
-}
 li{
 	display: inline;
 }
+img{
+	box-shadow: 2px 2px 2px #02010a;
+	width: 100%;
+}
+#contenido{
+	margin: 0 auto;
+}
+#imagenes{
+	display: flex;
+	flex-direction: column;
+}
 #central{
 	background-color: #82c3a6;
-	text-align: center;
 }
 #secundaria{
 	display: flex;
-	flex-direction: row;
+	background-color: #d5c75f;
 }
-#secundaria img{
-	width: 50%;
+
+#imagen2 img:hover{
+	animation-name: rotacion;
+	animation-duration: 1s;
+}
+#imagen3 img:hover{
+	animation-name: traslacion;
+	animation-duration: 1s;
+}
+footer{
+	display: flex;
+}
+@-webkit-keyframes rotacion{
+	from{
+	}
+	to{
+		transform: rotate(10deg);
+		box-shadow: 2px 2px 2px #82c3a6;
+		border: 2px solid black;
+	}
+}
+@-webkit-keyframes traslacion{
+	from{
+	}
+	to{
+		transform: translateX(5px|);
+		transform: translateY(20px);
+		box-shadow: 2px 2px 2px #82c3a6;
+		border: 2px solid black;
+	}
+}
+@media (max-width:420px){
+	#contenido{
+		width: 100%;
+	}
+	#secundaria, footer{
+		flex-direction: column;
+	}
+}
+@media (min-width:421px){
+	#contenido{
+		max-width: 900px;
+	}
+	#secundaria, footer{
+		flex-direction: row;
+	}
+}
+div[class*="footer"]{
+	width: 25%;
+	margin: 0 40px;
 }
