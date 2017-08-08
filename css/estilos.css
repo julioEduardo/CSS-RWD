@@ -1,0 +1,33 @@
+body{
+	font-family: 'Dancing Script', cursive;
+}
+header{
+	background-color: #5b7989;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+h1{
+	text-align: left;
+	color: white;
+	text-shadow: 2px 2px 2px #02010a;
+}
+nav{
+	text-align: right;
+}
+ul{
+
+}
+li{
+	display: inline;
+}
+#central{
+	background-color: #82c3a6;
+	text-align: center;
+}
+#secundaria{
+	display: flex;
+	flex-direction: row;
+}
+#secundaria img{
+	width: 50%;
+}
