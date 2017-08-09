@@ -6,6 +6,7 @@ header{
 	background-color: #5b7989;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
+	padding: 20px;
 }
 footer{
 	border-radius: 0px 0px 10px 10px;
@@ -15,9 +16,15 @@ h1{
 	text-align: left;
 	color: white;
 	text-shadow: 2px 2px 2px #02010a;
+	display: inline;
 }
 nav{
 	text-align: right;
+	display: inline;
+}
+ul{
+	display: inline;
+	float: right;
 }
 li{
 	display: inline;
@@ -29,14 +36,19 @@ img{
 #contenido{
 	margin: 0 auto;
 }
-#imagenes{
+.contenedor{
 	display: flex;
 	flex-direction: column;
 }
+
 #central{
 	background-color: #82c3a6;
 }
 #secundaria{
+	display: flex;
+	background-color: #d5c75f;
+}
+#galeria{
 	display: flex;
 	background-color: #d5c75f;
 }
@@ -49,6 +61,7 @@ img{
 	animation-name: traslacion;
 	animation-duration: 1s;
 }
+
 footer{
 	display: flex;
 }
@@ -78,6 +91,13 @@ footer{
 	#secundaria, footer{
 		flex-direction: column;
 	}
+	#galeria{
+		flex-flow: column wrap;
+	}
+	div[class*="footer"]{
+		width: 80%;
+		margin: 0 auto;
+	}
 }
 @media (min-width:421px){
 	#contenido{
@@ -86,8 +106,27 @@ footer{
 	#secundaria, footer{
 		flex-direction: row;
 	}
+	#galeria{
+		flex-flow: row wrap;
+	}
+	div[class*="footer"]{
+		width: 25%;
+		margin: 0 40px;
+	}
 }
-div[class*="footer"]{
-	width: 25%;
-	margin: 0 40px;
+
+figure[class*="imagen"]{
+	flex:1 0 20%;
+}
+.imagen1{
+	-webkit-filter:blur(10px);
+	filter: blur(10px);
+}
+#galeria figure:nth-child(even) {
+	-webkit-filter:grayscale(100%);
+	filter: grayscale(100%);
+}
+.imagen3{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
 }
